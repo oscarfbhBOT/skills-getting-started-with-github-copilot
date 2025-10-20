@@ -8,36 +8,40 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <h1>Instituto Mergington</h1>
+      <h2>Actividades extracurriculares</h2>
     </header>
 
     <main>
       <section id="activities-container">
-        <h3>Available Activities</h3>
+        <h3>Actividades disponibles</h3>
         <div id="activities-list">
-          <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
+          <!-- Aquí se cargarán las actividades -->
+          <p>Cargando actividades...</p>
         </div>
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+        <h3>Inscribirse en una actividad</h3>
         <form id="signup-form">
           <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <label for="email">Correo del estudiante:</label>
+            <input type="email" id="email" required placeholder="tu-correo@mergington.edu" />
           </div>
           <div class="form-group">
-            <label for="activity">Select Activity:</label>
+            <label for="activity">Selecciona una actividad:</label>
             <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
+              <option value="">-- Selecciona una actividad --</option>
+              <!-- Aquí se cargarán las opciones -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" id="signup-button">
+            <span class="spinner hidden" aria-hidden="true"></span>
+            <span class="btn-label">Inscribirse</span>
+          </button>
         </form>
-        <div id="message" class="hidden"></div>
+        <!-- Región ARIA para que los lectores de pantalla anuncien mensajes dinámicos -->
+        <div id="message" class="hidden" role="status" aria-live="polite" aria-atomic="true"></div>
       </section>
     </main>
 
