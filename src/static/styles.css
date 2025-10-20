@@ -155,7 +155,7 @@ footer {
 }
 
 .participants-list {
-  list-style: none;
+  list-style: none; /* hide bullet points */
   padding: 0;
   margin: 0;
   display: flex;
@@ -194,6 +194,66 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* Delete button for participants */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.participant-delete:hover {
+  color: #ff1744;
+}
+
+.participant-delete svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* Spinner inside buttons */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Disabled button state */
+button[disabled],
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.participant-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 auto;
 }
 
 /* Empty state for participants */
